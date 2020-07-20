@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('cars/',include('cars.urls')),
     path("",views.index,name='cars'),
+    path('ads.txt',views.Ads,name='ads'),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

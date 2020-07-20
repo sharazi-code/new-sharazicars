@@ -1,0 +1,13 @@
+[0;1;31m●[0m gunicorn.service - gunicorn daemon
+   Loaded: loaded (/etc/systemd/system/gunicorn.service; disabled; vendor preset: enabled)
+   Active: [0;1;31mfailed[0m (Result: exit-code) since Wed 2020-02-12 08:08:54 UTC; 1h 0min ago
+ Main PID: 11231 (code=exited, status=217/USER)
+
+Feb 12 08:08:54 sharazicars systemd[1]: Started gunicorn daemon.
+Feb 12 08:08:54 sharazicars systemd[11231]: [0;1;31m[0;1;39m[0;1;31mgunicorn.service: Failed to determine user credentials: No such process[0m
+Feb 12 08:08:54 sharazicars systemd[11231]: [0;1;31m[0;1;39m[0;1;31mgunicorn.service: Failed at step USER spawning /home/sammy/myprojectdir/myprojectenv/bin/gunicorn: No such process[0m
+Feb 12 08:08:54 sharazicars systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=217/USER[0m
+Feb 12 08:08:54 sharazicars systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Failed with result 'exit-code'.[0m
+Feb 12 08:08:54 sharazicars systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Start request repeated too quickly.[0m
+Feb 12 08:08:54 sharazicars systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Failed with result 'exit-code'.[0m
+Feb 12 08:08:54 sharazicars systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start gunicorn daemon.[0m

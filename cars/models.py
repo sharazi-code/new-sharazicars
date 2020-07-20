@@ -7,11 +7,11 @@ class Posts(models.Model):
     id = models.AutoField(primary_key=True)
     slug = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
-    postdesc = models.CharField(max_length=500, default="Nothing")
+    postdesc = models.TextField(max_length=500, default="Nothing")
     mainimage = models.ImageField(upload_to="images")
     relatedlink = models.CharField(max_length=100)
     relatedtext = models.CharField(max_length=100)
-    desc = models.TextField(max_length=5000)
+    desc = models.TextField(max_length=8000)
     tags = models.TextField(max_length=500,default="Nothing")
     postimage = models.ImageField(upload_to="images", default="no imahe")
     postimage1 = models.ImageField(upload_to="images", default="no image")
@@ -77,8 +77,8 @@ class Cardetail(models.Model):
     cartags = models.TextField(max_length=500,default="Nothing")
     postviews = models.IntegerField(default=0)
     airbags =(
-        ("Yes","Yes"),
-        ("No","No"),
+        ("&#9989;","Yes"),
+        ("&#10060;","No"),
     )
     # [..]
     Airbags = models.CharField(
@@ -178,4 +178,4 @@ class Cardetail(models.Model):
     )
 
     def __str__(self):
-        return self.carname
+        return self.title

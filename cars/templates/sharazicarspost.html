@@ -8,7 +8,7 @@
 
 	<link rel="icon" href="{%static 'socialicon/web-logo.png' %}">
 	{% block meta %}
-    <meta property="og:image" content="/media/{posttitle.mainimage}}" />
+    <meta property="og:image" content="/media/{{posttitle.mainimage}}" />
     <meta name="description" content="{{posttitle.postdesc}} ">
     <meta name="keywords" content="{{posttitle.tags}}">{% endblock %}
     <style>{% block css %}
@@ -20,6 +20,11 @@
 	overflow: hidden;
 
     }
+    .relatepic{
+        width:230px;
+        height:180px;
+       object-fit: cover;
+              }
     .posthalf{
     width:870px;
     float:left;
@@ -183,7 +188,7 @@
           margin:0px;
           margin-top:100px;
           width:95%;
-          font-size:10px;
+          font-size:20px;
           }
           .sharer{
           width:95%;
@@ -202,18 +207,18 @@
           width:99%;
           }
           .postpicture img{
-          width:95%;
-          height:400px;
+          width:98%;
+          height:200px;
           }
 
           .relatedpost{
           width:99%;
           margin:0px;
           min-height: xxx;
-	      overflow: hidden;
+	  overflow: hidden;
           }
           .relatedpost1{
-          width:95%;
+          width:98%;
 
           }
           .sidebar{
@@ -255,6 +260,11 @@
 
         }
 
+       .relatepic{
+        width:98%;
+        height:180px;
+       object-fit: cover;
+              }        
 
                 }
         {% endblock %}
@@ -268,7 +278,7 @@
 <div class="postpage">
     <div class="posthalf">
 <div class="sharer">
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://sharazicars.pk/post/{{posttitle.slug}}"><img src="{%static 'socialicon/facebook.svg' %}" height="50px" width="50px"/></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://sharazicars.pk/cars/post/{{posttitle.slug}}"><img src="{%static 'socialicon/facebook.svg' %}" height="50px" width="50px"/></a>
     <img src="{%static 'socialicon/whatsapp.svg' %}" height="50px" width="50px"/>
     <img src="{%static 'socialicon/google.svg' %}" height="50px" width="50px"/>
     <img src="{%static 'socialicon/in.svg' %}" height="50px" width="50px"/>
@@ -283,11 +293,17 @@
     <div class="postdesc">
         <p>{{posttitle.postdesc}}</p>
         <b>Related News :</b> <a href="{{posttitle.relatedlink}}">{{posttitle.relatedtext}}</a></br>
+</br>
+<div ><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- React Rosponsive ad --><ins class="adsbygoogle"     style="display:inline-block;width:336px;height:280px"     data-ad-client="ca-pub-8389954101648414"     data-ad-slot="7850486315"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+</br>
         {% for i in dating %}
         <p>{{ i|safe }}</p>
         {% endfor %}
 
     </div>
+<div ><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"     style="display:block"     data-ad-format="autorelaxed"     data-ad-client="ca-pub-8389954101648414"     data-ad-slot="4261898546"></ins>
+<script>     (adsbygoogle = window.adsbygoogle || []).push({});</script></div>
 </div>
 <div class="relatedpost">
     </br>
@@ -295,7 +311,7 @@
     {% for i in relateddata %}
     <div class="relatedpost1">
         <a href="{{i.slug}}">
-    <div><img src="/media/{{i.mainimage}}" height="180px" width="230px"/></div>
+    <div><img class="relatepic" src="/media/{{i.mainimage}}"/></div>
         {{i.title}}</a>
     </div>
     {% endfor %}
@@ -311,7 +327,9 @@
 
     </div>
     <div class="ads">
-        ad
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- React Rosponsive ad -->
+<ins class="adsbygoogle"     style="display:inline-block;width:336px;height:280px"     data-ad-client="ca-pub-8389954101648414"     data-ad-slot="7850486315"></ins>
+<script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
     <div class="subscriber">
         <form>

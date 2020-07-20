@@ -48,3 +48,5 @@ def Disclaimer(request):
     return render(request,'disclaimer.html')
 def Videos(request):
     return render(request,'videos.html')
+def Ads(request):
+    return render(request,'Ads.txt')

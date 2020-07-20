@@ -87,7 +87,7 @@
         }
         .newsdesc{
         padding:5px;
-        font-size:10px;
+        font-size:15px;
         color:red;
         margin:5px;
         max-height:100px;
@@ -96,7 +96,7 @@
         }
         .newses{
         width:95%;
-        height:250px;
+        height:270px;
         }
         .newses a:hover{
         color:green;
@@ -124,10 +124,12 @@
         <fieldset>
           <legend>{{cardata.0.company}} Cars</legend>
     {% for i in cardata %}
-    <div class="newses"><a href="http://127.0.0.1:8000/ali/car/{{i.slug}}">
+    <div class="newses"><a href="/cars/car/{{i.slug}}">
         <div class="newsimg"><img class="newscrop" src="/media/{{i.mainimage}}" /></div>
         <div class="newstext">{{i.title}}</div>
-        <div class="newsdesc">Car Variant : {{i.carvariant}}</div></a>
+     
+	<div class="newsdesc"> Price : {{i.carprice}}</div> 	
+</a>
     </div>
             {% endfor %}
       </fieldset>

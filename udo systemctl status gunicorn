@@ -1,0 +1,4 @@
+-- Logs begin at Tue 2020-02-11 15:17:05 UTC, end at Wed 2020-02-12 09:09:32 UTC. --
+Feb 12 08:06:40 sharazicars systemd[1]: Listening on gunicorn socket.
+Feb 12 08:08:54 sharazicars systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.socket: Failed with result 'service-start-limit-hit'.[0m
+Feb 12 09:08:49 sharazicars systemd[1]: Listening on gunicorn socket.
